@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fires\\source\\repos\\EShop\\EShop.csproj": {}
+    "C:\\Users\\fires\\source\\repos\\EShopRepository\\EShop\\EShop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fires\\source\\repos\\EShop\\EShop.csproj": {
+    "C:\\Users\\fires\\source\\repos\\EShopRepository\\EShop\\EShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fires\\source\\repos\\EShop\\EShop.csproj",
+        "projectUniqueName": "C:\\Users\\fires\\source\\repos\\EShopRepository\\EShop\\EShop.csproj",
         "projectName": "EShop",
-        "projectPath": "C:\\Users\\fires\\source\\repos\\EShop\\EShop.csproj",
+        "projectPath": "C:\\Users\\fires\\source\\repos\\EShopRepository\\EShop\\EShop.csproj",
         "packagesPath": "C:\\Users\\fires\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fires\\source\\repos\\EShop\\obj\\",
+        "outputPath": "C:\\Users\\fires\\source\\repos\\EShopRepository\\EShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
               "version": "[5.0.14, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.14, )"
             }
