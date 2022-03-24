@@ -790,3 +790,5 @@ C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\C
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Category\Create.cshtml.g.cs
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Country\Create.cshtml.g.cs
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Country\Index.cshtml.g.cs
+C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Category\Edit.cshtml.g.cs
+C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Category\Delete.cshtml.g.cs
