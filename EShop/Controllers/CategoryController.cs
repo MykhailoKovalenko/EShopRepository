@@ -32,6 +32,10 @@ namespace EShop.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Category category)
         {
+            if(!ModelState.IsValid)
+            {
+                return View(category);
+            }
             _context.Categories.Add(category);
             _context.SaveChanges();
 
