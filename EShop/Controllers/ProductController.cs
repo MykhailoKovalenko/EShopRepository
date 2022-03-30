@@ -1,6 +1,7 @@
 ﻿using EShop.Data;
 using EShop.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,86 +30,109 @@ namespace EShop.Controllers
             return View(products);
         }
 
-    //    public IActionResult Create()
-    //    {
-    //        return View();
-    //    }
+        public IActionResult Upsert(int? id)
+        {
+            IEnumerable<SelectListItem> CategoryDropDown = _context.Categories.Select(i => new SelectListItem
+            {
+                Text = i.Name,
+                Value = i.Id.ToString()
+            });
 
-    //    [HttpPost]
-    //    [ValidateAntiForgeryToken]
-    //    public IActionResult Create(Category category)
-    //    {
-    //        if (!ModelState.IsValid)
-    //        {
-    //            return View(category);
-    //        }
-    //        _context.Categories.Add(category);
-    //        _context.SaveChanges();
+            ViewBag.CategoryDropDown = CategoryDropDown;
 
-    //        return RedirectToAction("Index");
-    //    }
+            Product product = new Product();
 
-    //    public IActionResult Edit(int? id)
-    //    {
-    //        if (id == null || id == 0)
-    //        {
-    //            return NotFound();
-    //        }
+            if (id == null)
+            {
+                return View(product);    
+            }
+            else
+            {
+                product = _context.Products.Find(id);
+                if (product == null)
+                {
+                    return NotFound();
+                }
 
-    //        var category = _context.Categories.Find(id);
-    //        if (category == null)
-    //        {
-    //            return NotFound();
-    //        }
+                return View(product);
+            }
+        }
 
-    //        return View(category);
-    //    }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Upsert(Category category)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(category);
+            }
+            _context.Categories.Add(category);
+            _context.SaveChanges();
 
-    //    [HttpPost]
-    //    [ValidateAntiForgeryToken]
-    //    public IActionResult Edit(Category category)
-    //    {
-    //        if (!ModelState.IsValid)
-    //        {
-    //            return View(category);
-    //        }
-    //        _context.Categories.Update(category);
-    //        _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
-    //        return RedirectToAction("Index");
-    //    }
+        //    public IActionResult Edit(int? id)
+        //    {
+        //        if (id == null || id == 0)
+        //        {
+        //            return NotFound();
+        //        }
 
-    //    public IActionResult Delete(int? id)
-    //    {
-    //        if (id == null || id == 0)
-    //        {
-    //            return NotFound();
-    //        }
+        //        var category = _context.Categories.Find(id);
+        //        if (category == null)
+        //        {
+        //            return NotFound();
+        //        }
 
-    //        var category = _context.Categories.Find(id);
-    //        if (category == null)
-    //        {
-    //            return NotFound();
-    //        }
+        //        return View(category);
+        //    }
 
-    //        return View(category);
-    //    }
+        //    [HttpPost]
+        //    [ValidateAntiForgeryToken]
+        //    public IActionResult Edit(Category category)
+        //    {
+        //        if (!ModelState.IsValid)
+        //        {
+        //            return View(category);
+        //        }
+        //        _context.Categories.Update(category);
+        //        _context.SaveChanges();
 
-    //    [HttpPost]
-    //    [ValidateAntiForgeryToken]
-    //    public IActionResult DeletePost(int? id)
-    //    {
-    //        var category = _context.Categories.Find(id);
-    //        if (category == null)
-    //        {
-    //            return NotFound();
-    //        }
+        //        return RedirectToAction("Index");
+        //    }
 
-    //        _context.Categories.Remove(category);
-    //        _context.SaveChanges();
+        //    public IActionResult Delete(int? id)
+        //    {
+        //        if (id == null || id == 0)
+        //        {
+        //            return NotFound();
+        //        }
 
-    //        return RedirectToAction("Index");
-    //    }
-    //}
-}
+        //        var category = _context.Categories.Find(id);
+        //        if (category == null)
+        //        {
+        //            return NotFound();
+        //        }
+
+        //        return View(category);
+        //    }
+
+        //    [HttpPost]
+        //    [ValidateAntiForgeryToken]
+        //    public IActionResult DeletePost(int? id)
+        //    {
+        //        var category = _context.Categories.Find(id);
+        //        if (category == null)
+        //        {
+        //            return NotFound();
+        //        }
+
+        //        _context.Categories.Remove(category);
+        //        _context.SaveChanges();
+
+        //        return RedirectToAction("Index");
+        //    }
+        //}
+    }
 }
