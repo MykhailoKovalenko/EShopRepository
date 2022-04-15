@@ -22,5 +22,10 @@ namespace EShop.Models
         public int CategoryId { get; set; }
         [ForeignKey("CategoryId")]
         public virtual Category Category { get; set; }
+        
+        [Display(Name = "Country")]
+        public int CountryId { get; set; }
+        [ForeignKey("CountryId")]
+        public virtual Country Country { get; set; }
     }
 }

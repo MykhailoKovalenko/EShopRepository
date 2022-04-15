@@ -796,3 +796,4 @@ C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\C
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\EShop.csproj.AssemblyReference.cache
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Product\Upsert.cshtml.g.cs
+C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Product\Delete.cshtml.g.cs
