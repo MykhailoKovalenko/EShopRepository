@@ -797,3 +797,5 @@ C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\EShop.csproj.
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Product\Upsert.cshtml.g.cs
 C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Product\Delete.cshtml.g.cs
+C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Shared\_IndividualProductCard.cshtml.g.cs
+C:\Users\fires\source\repos\EShopRepository\EShop\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
