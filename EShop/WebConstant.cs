@@ -8,5 +8,6 @@ namespace EShop
     public static class WebConstant
     {
         public static string ImagePath = @"\images\product\";
+        public static string SessionCart = "ShoppingCartSession";
     }
 }
